@@ -3,10 +3,10 @@
     
     /* Expresion regular para matching */
     var regexp1 = XRegExp('(?<numero> [-+]?[0-9]+(\.[0-9]+)?(?:e[+-]?[0-9]+)?) #valor              \n' +
-                         '(?<espacio> \\s*)                                                       \n' +
-							           '(?<tipo> \\s*[fFcCkKmMpPdDeE])                      # tipo de entrada   \n' + 
-							           '(?<to> \\s*(?:to)?\\s*)                             # to opcional       \n' +
-							           '(?<destino> [fFcCkKmMpPdDeE])                       # tipo destino', 'x');
+                          '(?<espacio> \\s*)                                                       \n' +
+			  '(?<tipo> \\s*[fFcCkKmMpPdDeE])                      # tipo de entrada   \n' + 
+			  '(?<to> \\s*(?:to)?\\s*)                             # to opcional       \n' +
+			  '(?<destino> [fFcCkKmMpPdDeE])                       # tipo destino', 'x');
 		
 		 /* Expresion regular en caso de no introducir tipo */
       var regexp2 = XRegExp('(?<numero> [-+]?[0-9]+(\.[0-9]+)?(?:e[+-]?[0-9]+)?) #valor              \n' +
@@ -33,7 +33,7 @@
         
     };
 
-    //Medida.constructor = Medida; 
+    Medida.constructor = Medida; 
     Medida.measures = Medida.measures || {};
     
     Medida.match = function(entrada)
